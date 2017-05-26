@@ -47,7 +47,7 @@ public class Programa {
      */
     private static int exibirMenu() {
         Scanner entrada = new Scanner(System.in);
-        
+        System.out.println("SIMULADOR DE VEICULOS");
         System.out.println("\n\n1) Adicionar Veiculo");
         System.out.println("2) Alterar velocidade");
         System.out.println("3) Listar Veiculos");
@@ -118,14 +118,14 @@ public class Programa {
         boolean alterou = false;
         Scanner entrada = new Scanner(System.in);
        
-        System.out.print("Qual o tipo de veiculo (1-carro, 2-caminhao, 3-onibus)? ");        
-        tipo = entrada.nextInt();
+        //System.out.print("Qual o tipo de veiculo (1-carro, 2-caminhao, 3-onibus)? ");        
+        //tipo = entrada.nextInt();
         System.out.print("Digite o modelo: ");
         modelo = entrada.next();
         System.out.print("Digite a velocidade: ");
         velocidade = entrada.nextInt();
-        
-        switch(tipo) {
+        alterou = simulador.alterarVelocidadeVeiculo(modelo, velocidade);
+        /**switch(tipo) {
             case 1: // carro
                 alterou = simulador.alterarVelocidadeCarro(modelo, velocidade);
                 break;
@@ -137,7 +137,7 @@ public class Programa {
                 break;
             default:
                 System.out.println("Tipo de veiculo invalido!");
-        }
+        }*/
         
         if (alterou) {
             System.out.println("Velocidade alterada!");
