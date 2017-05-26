@@ -7,11 +7,12 @@
  * @author Julio Cesar Alves
  * @version 2016-0-19
  */
-public class Veiculo {
+public abstract class  Veiculo {
     private String modelo;
     private String marca;
     private String placa;
     private int velocidadeAtual;
+    private double imposto;
     
     /*
      * Constroi o objeto a partir do modelo, marca e placa passados.
@@ -26,6 +27,7 @@ public class Veiculo {
         this.marca = marca;
         this.placa = placa;
         velocidadeAtual = 0;
+        imposto = 100;
     }
     
     /**
@@ -89,5 +91,9 @@ public class Veiculo {
      */
     public String getDescricaoVeiculo() {
         return placa + "\t" + modelo + "\t" + marca + "\t" + velocidadeAtual + " Km/h";
+    }
+    
+    public double getImposto(){
+        return imposto;
     }
 }

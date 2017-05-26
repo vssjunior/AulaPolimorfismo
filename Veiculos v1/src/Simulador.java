@@ -7,8 +7,7 @@ import java.util.ArrayList;
  * @author Julio Cesar Alves
  * @version 2016-06-19
  */
-public class Simulador
-{
+public class Simulador{
     // colecao de Veiculos do simulador
     private ArrayList<Veiculo> veiculos;
     
