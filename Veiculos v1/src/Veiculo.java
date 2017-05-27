@@ -85,7 +85,7 @@ public abstract class  Veiculo {
     
     /**
      * Retorna a descricao do veiculo no formato:
-     *  Placa   Modelo  Marca   Velocidade km/h
+     *  Placa   Modelo  Marca Imposto   Velocidade km/h
 	 * 
 	 * @return A descricao do veiculo (seus campos separados por tabulacoes)
      */
@@ -93,6 +93,10 @@ public abstract class  Veiculo {
         return placa + "\t" + modelo + "\t" + marca + "\t" + velocidadeAtual + " Km/h";
     }
     
+    /**
+     * Retorna o valor do imposto base de um veiculo (tipo double)
+     * @return 
+     */
     public double getImposto(){
         return imposto;
     }

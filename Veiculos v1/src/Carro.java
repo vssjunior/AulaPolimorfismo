@@ -35,18 +35,36 @@ public class Carro extends Veiculo {
     
         /**
      * Retorna a descricao do carro no formato:
-     *  Placa   Modelo  Marca   Velocidade km/h     Flex (ou Comum)
-	 * 
-	 * @return A descricao do carro (a descricao do veiculo mais seus campos separados por tabulacoes)
+     * Placa   Modelo  Marca   Imposto     Velocidade km/h     Flex (ou Comum)
+     * Sobrescrevendo o metodo getDescricaoVeiculo na super classe
+     * @return A descricao do carro (a descricao do veiculo mais seus campos separados por tabulacoes)
      */
-    public String getDescricaoCarro() {
-        String descricao = getDescricaoVeiculo();
+    @Override
+    public String getDescricaoVeiculo() {
+        String descricao = super.getDescricaoVeiculo();
         if (ehFlex) {
-            descricao = descricao + "\tFlex";
+            descricao = descricao + "\tR$" + calculaImposto() + "\tFlex";
         }
         else {
-            descricao = descricao + "\tComum";
+            descricao = descricao + "\tR$" + calculaImposto() + "\tComum";
         }
         return descricao;
+    }
+    
+    /**
+     * Metodo que busca o valor base do imposto na super classe
+     * faz o calculo de acordo com as normas da prefeitura
+     * retorna um double com o valor do imposto calculado
+     * @return 
+     */
+    public double calculaImposto(){
+        double impostoCalculado = 0;
+        if (ehFlex == true){
+            impostoCalculado = (super.getImposto() - (10/100));
+        }else{
+            impostoCalculado = (super.getImposto() + (5/100));
+        }
+        System.out.println("ok");
+        return impostoCalculado;
     }
 }

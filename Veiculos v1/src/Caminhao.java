@@ -36,11 +36,30 @@ public class Caminhao extends Veiculo
     
     /**
      * Retorna a descricao do caminhao no formato:
-     *  Placa   Modelo  Marca   Velocidade km/h     Capacidade
-	 * 
-	 * @return A descricao do caminhao (a descricao do veiculo mais seus campos separados por tabulacoes)
+     * Placa   Modelo  Marca Imposto   Velocidade km/h     Capacidade
+     * Sobrescrevendo o metodo getDescricaoVeiculo na super classe
+     * @return A descricao do caminhao (a descricao do veiculo mais seus campos separados por tabulacoes)
      */
-    public String getDescricaoCaminhao() {
-        return getDescricaoVeiculo() + "\t" + capacidadeCarga;
+    @Override
+    public String getDescricaoVeiculo() {
+        return getDescricaoVeiculo() + "\tR$" + calculaImposto() + "\t" + capacidadeCarga;
+    }
+    
+    /**
+     * Metodo que busca o valor base do imposto na super classe
+     * faz o calculo de acordo com as normas da prefeitura
+     * retorna um double com o valor do imposto calculado
+     * @return 
+     */
+    public double calculaImposto(){
+        double impostoCalculado = 0;
+        if(capacidadeCarga < 10){
+            impostoCalculado = (super.getImposto() - (10/100));
+        }else if (capacidadeCarga > 10 && capacidadeCarga < 30){
+            impostoCalculado = super.getImposto();
+        }else{
+            impostoCalculado = (super.getImposto() + (200/100));
+        }
+        return impostoCalculado;
     }
 }

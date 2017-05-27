@@ -35,11 +35,28 @@ public class Onibus extends Veiculo {
     
     /**
      * Retorna a descricao do onibus no formato:
-     *  Placa   Modelo  Marca   Velocidade km/h     Capacidade
-	 * 
-	 * @return A descricao do onibus (a descricao do veiculo mais seus campos separados por tabulacoes)
+     * Placa   Modelo  Marca   Imposto   Velocidade km/h     Capacidade
+     * Sobrescrevendo o metodo getDescricaoVeiculo na super classe
+     * @return A descricao do onibus (a descricao do veiculo mais seus campos separados por tabulacoes)
      */
-    public String getDescricaoOnibus() {
-        return getDescricaoVeiculo() + "\t" + capacidadePassageiros;
+    @Override
+    public String getDescricaoVeiculo() {
+        return getDescricaoVeiculo() + "\tR$" + calculaImposto() + "\t" + capacidadePassageiros;
+    }
+    
+    /**
+     * Metodo que busca o valor base do imposto na super classe
+     * faz o calculo de acordo com as normas da prefeitura
+     * retorna um double com o valor do imposto calculado
+     * @return 
+     */
+    public double calculaImposto(){
+        double impostoCalculado = 0;
+        if(capacidadePassageiros < 30){
+            
+        }else{
+            impostoCalculado = super.getImposto();
+        }
+        return impostoCalculado;
     }
 }
