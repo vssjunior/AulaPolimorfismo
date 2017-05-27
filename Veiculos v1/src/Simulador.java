@@ -45,6 +45,18 @@ public class Simulador{
     }
     
     /**
+     * Adiciona uma moto ao simulador
+     * @param modelo
+     * @param marca
+     * @param placa
+     * @param cilindrada 
+     */
+    public void adicionarMoto(String modelo, String marca, String placa, int cilindrada){
+        Moto moto = new Moto (modelo, marca, placa, cilindrada);
+        veiculos.add(moto);
+    }
+    
+    /**
      * Adiciona um caminhao ao simulador
      * 
      * @param modelo Modelo do caminhao a ser criado.

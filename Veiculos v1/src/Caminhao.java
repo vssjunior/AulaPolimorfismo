@@ -54,11 +54,11 @@ public class Caminhao extends Veiculo
     public double calculaImposto(){
         double impostoCalculado = 0;
         if(capacidadeCarga < 10){
-            impostoCalculado = (super.getImposto() - (10/100));
+            impostoCalculado = (super.getImposto() - ((10/100)*super.getImposto()));
         }else if (capacidadeCarga > 10 && capacidadeCarga < 30){
             impostoCalculado = super.getImposto();
         }else{
-            impostoCalculado = (super.getImposto() + (200/100));
+            impostoCalculado = (super.getImposto() + ((200/100)*super.getImposto()));
         }
         return impostoCalculado;
     }

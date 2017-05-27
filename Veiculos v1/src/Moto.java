@@ -5,22 +5,25 @@
  */
 
 /**
- * Classe que representa um Trator.
+ * Classe que representa uma Moto.
  * Carro herda da classe Veiculo (e, portanto, tem modelo, marca, placa e velocidade atual)
- * Esta classe não possui nenhum atributo adicional.
+ * E acrescenta se a cilindrada da moto.
  * @author junior
  */
-public class Trator extends Veiculo{
+public class Moto extends Veiculo {
+    int cilindrada;
     
     /**
-     * Controi objeto da classe Trator a partir dos parametros passados
-     * Obs: a velocidade inicial do trator eh definida na classe Veiculo
+     * Controi objeto da classe Moto a partir dos parametros passados
+     * Obs: a velocidade inicial da moto eh definida na classe Veiculo
      * @param modelo
      * @param marca
-     * @param placa 
+     * @param placa
+     * @param cilindrada 
      */
-    public Trator(String modelo, String marca, String placa){
+    public Moto(String modelo, String marca, String placa, int cilindrada){
         super(modelo, marca, placa);
+        this.cilindrada = cilindrada;
     }
     
     /**
@@ -41,7 +44,14 @@ public class Trator extends Veiculo{
      * @return 
      */
     public double calculaImposto(){
-        double impostoCalculado = 0;
+        double impostoCalculado = super.getImposto();
+        if(cilindrada == 125){
+            impostoCalculado = (impostoCalculado + ((5/100)*impostoCalculado));
+        }else if(cilindrada == 250){
+            impostoCalculado = (impostoCalculado + ((15/100)*impostoCalculado));
+        }else{
+            impostoCalculado = (impostoCalculado + ((25/100)*impostoCalculado));
+        }
         return impostoCalculado;
     } 
 }
