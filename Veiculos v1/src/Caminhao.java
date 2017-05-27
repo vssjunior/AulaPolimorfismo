@@ -42,7 +42,7 @@ public class Caminhao extends Veiculo
      */
     @Override
     public String getDescricaoVeiculo() {
-        return getDescricaoVeiculo() + "\tR$" + calculaImposto() + "\t" + capacidadeCarga;
+        return super.getDescricaoVeiculo() + "\tR$" + calculaImposto() + "\t" + capacidadeCarga;
     }
     
     /**

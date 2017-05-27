@@ -33,6 +33,18 @@ public class Simulador{
     }
     
     /**
+     * Adiciona um trator ao simulador
+     * 
+     * @param modelo
+     * @param marca
+     * @param placa 
+     */
+    public void adicionarTrator(String modelo, String marca, String placa){
+        Trator trator = new Trator(modelo, marca, placa);
+        veiculos.add(trator);
+    }
+    
+    /**
      * Adiciona um caminhao ao simulador
      * 
      * @param modelo Modelo do caminhao a ser criado.
