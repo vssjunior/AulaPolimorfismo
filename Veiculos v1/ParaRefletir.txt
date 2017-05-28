@@ -1,0 +1,15 @@
+Herança e Polimorfismo:
+
+• Herança
+
+Permite criar interrelações entre classes (classe pai e classes filhas).
+A vantagem clara é o reuso de código.
+
+• Polimorfismo
+
+Permite definir níveis ou camadas de abstração diferenciados.
+Objetos mais gerais representam um conceito mais geral da sua lógica,
+enquanto implementações mais específicas determinam como o programa se comporta nessas situações.
+Vantagens:  Remove duplicação de código
+            Princípio da substituição (importante): posso declarar uma variável de um tipo e 
+atribuir a ela um objeto que é um subtipo do seu tipo.
