@@ -34,7 +34,7 @@ public class Moto extends Veiculo {
      */
     @Override
     public String getDescricaoVeiculo() {
-        return super.getDescricaoVeiculo() + "\t\tR$" + calculaImposto() + cilindrada;
+        return super.getDescricaoVeiculo() + "\t\tR$" + calculaImposto() + "\t\t" + cilindrada;
     }
     
     /**
@@ -44,13 +44,14 @@ public class Moto extends Veiculo {
      * @return 
      */
     public double calculaImposto(){
-        double impostoCalculado = super.getImposto();
+        double impostoCalculado = 0;
+        double recebeImposto = super.getImposto();
         if(cilindrada == 125){
-            impostoCalculado = (impostoCalculado + ((5/100)*impostoCalculado));
+            impostoCalculado = (recebeImposto + ((5/100) * recebeImposto));
         }else if(cilindrada == 250){
-            impostoCalculado = (impostoCalculado + ((15/100)*impostoCalculado));
+            impostoCalculado = (recebeImposto + ((15/100) * recebeImposto));
         }else{
-            impostoCalculado = (impostoCalculado + ((25/100)*impostoCalculado));
+            impostoCalculado = (recebeImposto + ((25/100) * recebeImposto));
         }
         return impostoCalculado;
     } 

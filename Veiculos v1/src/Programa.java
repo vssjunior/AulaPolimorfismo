@@ -135,20 +135,6 @@ public class Programa {
         System.out.print("Digite a velocidade: ");
         velocidade = entrada.nextInt();
         alterou = simulador.alterarVelocidadeVeiculo(modelo, velocidade);
-        /**switch(tipo) {
-            case 1: // carro
-                alterou = simulador.alterarVelocidadeCarro(modelo, velocidade);
-                break;
-            case 2: // caminhao
-                alterou = simulador.alterarVelocidadeCaminhao(modelo, velocidade);            
-                break;
-            case 3: // onibus
-                alterou = simulador.alterarVelocidadeOnibus(modelo, velocidade);            
-                break;
-            default:
-                System.out.println("Tipo de veiculo invalido!");
-        }*/
-        
         if (alterou) {
             System.out.println("Velocidade alterada!");
         }

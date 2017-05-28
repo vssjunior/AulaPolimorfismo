@@ -101,27 +101,7 @@ public class Simulador{
     }
     
     /**
-     * Altera a velocidade atual do carro cujo modelo foi passado.
-     * Se houver dois carros com o mesmo modelo, altera apenas o primeiro encontrado.
-     * A velocidade eh alterada se o carro for encontrado e a velocidade for valida
-     * 
-     * @param modelo Modelo do carro que tera sua velocidade alterada
-     * @param velocidade Velocidade que o carro passara a ter
-     * @return Retorna se a velocidade foi realmente alterada
-     */
-    /*public boolean alterarVelocidadeCarro(String modelo, int velocidade) {
-        Carro carro = buscarCarro(modelo);
-        
-        if (carro != null) {
-            return carro.setVelocidadeAtual(velocidade);
-        }
-        else {
-            return false;
-        }
-    }*/
-    
-    /**
-     * Retorna um carro a partir do modelo passado.
+     * Retorna um Veiculo a partir do modelo passado.
      * Se houver dois carros com o mesmo modelo retorna o primeiro encontrado.
      * 
      * @param modelo Modelo do carro a ser buscado
@@ -135,42 +115,6 @@ public class Simulador{
         }
         return null;
     }
-    
-    /**
-     * Altera a velocidade atual do caminhao cujo modelo foi passado.
-     * Se houver dois caminhoes com o mesmo modelo, altera apenas o primeiro encontrado.
-     * A velocidade eh alterada se o caminhao for encontrado e a velocidade for valida
-     * 
-     * @param modelo Modelo do caminhao que tera sua velocidade alterada
-     * @param velocidade Velocidade que o caminhao passara a ter
-     * @return Retorna se a velocidade foi realmente alterada
-     */
-    /*public boolean alterarVelocidadeCaminhao(String modelo, int velocidade) {
-        Caminhao caminhao = buscarCaminhao(modelo);
-        
-        if (caminhao != null) {
-            return caminhao.setVelocidadeAtual(velocidade);
-        }
-        else {
-            return false;
-        }
-    }*/
-    
-    /**
-     * Retorna um caminhao a partir do modelo passado.
-     * Se houver dois caminhoes com o mesmo modelo retorna o primeiro encontrado.
-     * 
-     * @param modelo Modelo do caminhao a ser buscado
-     * @return Retorna o caminhao encontrado ou null se ele nao existir.
-     */
-    /**private Caminhao buscarCaminhao(String modelo) {
-        for (Caminhao c : caminhoes) {
-            if (c.getModelo().equals(modelo)) {
-                return c;
-            }
-        }
-        return null;
-    }*/
 
     /**
      * Altera a velocidade atual do onibus cujo modelo foi passado.
@@ -191,21 +135,5 @@ public class Simulador{
             return false;
         }
     }
-    
-    /**
-     * Retorna um onibus a partir do modelo passado.
-     * Se houver dois onibus com o mesmo modelo retorna o primeiro encontrado.
-     * 
-     * @param modelo Modelo do onibus a ser buscado
-     * @return Retorna o onibus encontrado ou null se ele nao existir.
-     */
-    /**private Onibus buscarOnibus(String modelo) {
-        for (Onibus o : colOnibus) {
-            if (o.getModelo().equals(modelo)) {
-                return o;
-            }
-        }
-        return null;
-    }*/  
 }
 

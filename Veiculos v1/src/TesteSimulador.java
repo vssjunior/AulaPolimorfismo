@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * Classe que sera responsavel pelos testes altomatizados de Simulacao do Transito.
+ * Classe que sera responsavel pelos testes automatizados de Simulacao do Transito.
  * Por enquanto, ela apenas trata as colecoes de veiculos (carros, caminhoes, onibus, tratores e motos).
  * 
  * @author Valdeci Soares da Silva Junior
@@ -12,7 +12,7 @@ public class TesteSimulador{
     private static ArrayList<Veiculo> veiculos = new ArrayList<Veiculo>();
     
     /**
-     * Adiciona um carro ao simulador para teste altomatizado com:
+     * Adiciona um carro ao simulador para teste automatizado com:
      * modelo do carro a ser criado
      * marca do carro a ser criado
      * placa do carro a ser criado
@@ -29,7 +29,7 @@ public class TesteSimulador{
     }
     
     /**
-     * Adiciona um carro ao simulador para teste altomatizado com:
+     * Adiciona um carro ao simulador para teste automatizado com:
      * modelo do carro a ser criado
      * marca do carro a ser criado
      * placa do carro a ser criado
@@ -46,7 +46,7 @@ public class TesteSimulador{
     }
     
     /**
-     * Adiciona um trator ao simulador para testes altomatizados com:
+     * Adiciona um trator ao simulador para testes automatizados com:
      * modelo do trator a ser criado
      * marca do trator a ser criado
      * placa do trator a ser criado
@@ -61,7 +61,7 @@ public class TesteSimulador{
     }
     
     /**
-     * Adiciona uma moto ao simulador para teste altomatizado com:
+     * Adiciona uma moto ao simulador para teste automatizado com:
      * modelo da moto a ser criada
      * marca da moto a ser criada
      * placa da moto a ser criada
@@ -78,7 +78,7 @@ public class TesteSimulador{
     }
     
     /**
-     * Adiciona um caminhao ao simulador para teste altomatizado com:
+     * Adiciona um caminhao ao simulador para teste automatizado com:
      * modelo Modelo do caminhao a ser criado.
      * marca Marca do caminhao a ser criado.
      * placa Placa do caminhao a ser criado.
@@ -95,7 +95,7 @@ public class TesteSimulador{
     }
     
     /**
-     * Adiciona um onibus ao simulador para teste altomatizado com:
+     * Adiciona um onibus ao simulador para teste automatizado com:
      * 
      * modelo Modelo do onibus a ser criado.
      * marca Marca do onibus a ser criado.
@@ -128,6 +128,10 @@ public class TesteSimulador{
         System.out.println(descricao);
     }
     
+    /**
+     * Classe principal que faz as chamadas dos metodos para automatização dos testes
+     * @param args 
+     */
     public static void main(String[] args) {
         adicionarCarro2();
         adicionarCarro1();
