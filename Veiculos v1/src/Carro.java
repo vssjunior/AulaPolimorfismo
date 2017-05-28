@@ -43,10 +43,10 @@ public class Carro extends Veiculo {
     public String getDescricaoVeiculo() {
         String descricao = super.getDescricaoVeiculo();
         if (ehFlex) {
-            descricao = descricao + "\tR$" + calculaImposto() + "\tFlex";
+            descricao = descricao + "\t\tR$" + calculaImposto() + "\t\tFlex";
         }
         else {
-            descricao = descricao + "\tR$" + calculaImposto() + "\tComum";
+            descricao = descricao + "\t\tR$" + calculaImposto() + "\t\tComum";
         }
         return descricao;
     }
@@ -64,7 +64,6 @@ public class Carro extends Veiculo {
         }else{
             impostoCalculado = (super.getImposto() + ((5/100)*super.getImposto()));
         }
-        System.out.println("ok");
         return impostoCalculado;
     }
 }

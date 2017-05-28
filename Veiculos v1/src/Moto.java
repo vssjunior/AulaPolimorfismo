@@ -34,7 +34,7 @@ public class Moto extends Veiculo {
      */
     @Override
     public String getDescricaoVeiculo() {
-        return super.getDescricaoVeiculo() + "\tR$" + calculaImposto() + "\t";
+        return super.getDescricaoVeiculo() + "\t\tR$" + calculaImposto() + cilindrada;
     }
     
     /**
