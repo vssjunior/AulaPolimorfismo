@@ -44,6 +44,6 @@ public class Gato extends Animal {
         return "Nome: " + nome + "\n" +
                "Especie: " + especie + "\n" +
                "Quantidade de Patas: " + qtdPatas + "\n" + 
-               "Cor do Pelo: " + corPelo;
+               "Cor do Pelo: " + corPelo + "\n";
     }    
 }

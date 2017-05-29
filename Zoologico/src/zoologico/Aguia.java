@@ -44,6 +44,6 @@ public class Aguia extends Animal {
         return "Nome: " + nome + "\n" +
                "Especie: " + especie + "\n" +
                "Quantidade de Patas: " + qtdPatas + "\n" + 
-               "Capacidade de voo: " + capVoo;
+               "Capacidade de voo: " + capVoo + "\n";
     } 
 }
