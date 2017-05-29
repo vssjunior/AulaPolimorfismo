@@ -9,8 +9,7 @@ import java.util.ArrayList;
  */
 public class TesteSimulador{
     // colecao de Veiculos do simulador
-    private static ArrayList<Veiculo> veiculos = new ArrayList<Veiculo>();
-    
+    private static Simulador simulador = new Simulador();    
     /**
      * Adiciona um carro ao simulador para teste automatizado com:
      * modelo do carro a ser criado
@@ -25,7 +24,7 @@ public class TesteSimulador{
         boolean ehFlex = true;
         Carro carro = new Carro(modelo, marca, placa, ehFlex);
         carro.setVelocidadeAtual(240);
-        veiculos.add(carro);
+        simulador.adicionarCarro(modelo, marca, placa, ehFlex);
     }
     
     /**
@@ -42,7 +41,7 @@ public class TesteSimulador{
         boolean ehFlex = false;
         Carro carro = new Carro(modelo, marca, placa, ehFlex);
         carro.setVelocidadeAtual(50);
-        veiculos.add(carro);
+        simulador.adicionarCarro(modelo, marca, placa, ehFlex);
     }
     
     /**
@@ -57,7 +56,7 @@ public class TesteSimulador{
         String placa = "ccc3333";
         Trator trator = new Trator(modelo, marca, placa);
         trator.setVelocidadeAtual(10);
-        veiculos.add(trator);
+        simulador.adicionarTrator(modelo, marca, placa);
     }
     
     /**
@@ -74,7 +73,7 @@ public class TesteSimulador{
         int cilindrada = 125;
         Moto moto = new Moto (modelo, marca, placa, cilindrada);
         moto.setVelocidadeAtual(80);
-        veiculos.add(moto);
+        simulador.adicionarMoto(modelo, marca, placa, cilindrada);
     }
     
     /**
@@ -91,7 +90,7 @@ public class TesteSimulador{
         double capacidadeCarga = 15;
         Caminhao caminhao = new Caminhao(modelo, marca, placa, capacidadeCarga);
         caminhao.setVelocidadeAtual(60);
-        veiculos.add(caminhao);
+        simulador.adicionarCaminhao(modelo, marca, placa, capacidadeCarga);
     }
     
     /**
@@ -109,23 +108,7 @@ public class TesteSimulador{
         int capacidadePassageiros = 40;
         Onibus onibus = new Onibus(modelo, marca, placa, capacidadePassageiros);
         onibus.setVelocidadeAtual(60);
-        veiculos.add(onibus);
-    }
-    
-    /**
-     * Retorna uma String com a descricao de toda a frota do simulador.
-     * Cada veiculo aparece em uma linha.
-     * Cada veiculo eh represetado como definido pela sua classe.
-	 *
-	 * @return Descricao completa da frota com um veiculo por linha
-     */
-    public static void getDescricaoFrota() {
-        String descricao = "FROTA DO SIMULADOR";
-        
-        for (Veiculo v: veiculos) {
-            descricao += "\n" + v.getDescricaoVeiculo();
-        }
-        System.out.println(descricao);
+        simulador.adicionarOnibus(modelo, marca, placa, capacidadePassageiros);
     }
     
     /**
@@ -139,6 +122,6 @@ public class TesteSimulador{
         adicionarCaminhao();
         adicionarMoto();
         adicionarOnibus();
-        getDescricaoFrota();
+        simulador.getDescricaoFrota();
     }
 }

@@ -60,9 +60,9 @@ public class Carro extends Veiculo {
     public double calculaImposto(){
         double impostoCalculado = 0;
         if (ehFlex == true){
-            impostoCalculado = (super.getImposto() - ((10/100)*super.getImposto()));
+            impostoCalculado = (super.getImposto() - ((10.0/100.0)*super.getImposto()));
         }else{
-            impostoCalculado = (super.getImposto() + ((5/100)*super.getImposto()));
+            impostoCalculado = (super.getImposto() + ((5.0/100.0)*super.getImposto()));
         }
         return impostoCalculado;
     }
