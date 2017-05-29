@@ -90,7 +90,7 @@ public abstract class  Veiculo {
 	 * @return A descricao do veiculo (seus campos separados por tabulacoes)
      */
     public String getDescricaoVeiculo() {
-        return placa + "\t\t" + modelo + "\t\t" + marca + "\t\t" + velocidadeAtual + " Km/h";
+        return placa + "\t\t" + modelo + "\t\t" + marca + "\t\tR$" + calculaImposto() + velocidadeAtual + " Km/h";
     }
     
     /**
@@ -99,5 +99,16 @@ public abstract class  Veiculo {
      */
     public double getImposto(){
         return imposto;
+    }
+    
+    /**
+     * Metodo que busca o valor base do imposto na super classe
+     * faz o calculo de acordo com as normas da prefeitura
+     * retorna um double com o valor do imposto calculado
+     * @return 
+     */
+    public double calculaImposto(){
+        double impostoCalculado = imposto;
+        return impostoCalculado;
     }
 }

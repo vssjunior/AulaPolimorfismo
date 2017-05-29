@@ -43,10 +43,10 @@ public class Carro extends Veiculo {
     public String getDescricaoVeiculo() {
         String descricao = super.getDescricaoVeiculo();
         if (ehFlex) {
-            descricao = descricao + "\t\tR$" + calculaImposto() + "\t\tFlex";
+            descricao = descricao + "\t\tFlex";
         }
         else {
-            descricao = descricao + "\t\tR$" + calculaImposto() + "\t\tComum";
+            descricao = descricao + "\t\tComum";
         }
         return descricao;
     }
@@ -57,6 +57,7 @@ public class Carro extends Veiculo {
      * retorna um double com o valor do imposto calculado
      * @return 
      */
+    @Override
     public double calculaImposto(){
         double impostoCalculado = 0;
         if (ehFlex == true){

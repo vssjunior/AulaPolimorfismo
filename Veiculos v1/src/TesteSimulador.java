@@ -122,6 +122,6 @@ public class TesteSimulador{
         adicionarCaminhao();
         adicionarMoto();
         adicionarOnibus();
-        simulador.getDescricaoFrota();
+        System.out.println(simulador.getDescricaoFrota());
     }
 }

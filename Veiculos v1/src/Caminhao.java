@@ -42,7 +42,7 @@ public class Caminhao extends Veiculo
      */
     @Override
     public String getDescricaoVeiculo() {
-        return super.getDescricaoVeiculo() + "\t\tR$" + calculaImposto() + "\t\t" + capacidadeCarga;
+        return super.getDescricaoVeiculo() + "\t\t" + capacidadeCarga;
     }
     
     /**
@@ -51,14 +51,15 @@ public class Caminhao extends Veiculo
      * retorna um double com o valor do imposto calculado
      * @return 
      */
+    @Override
     public double calculaImposto(){
         double impostoCalculado = 0;
         if(capacidadeCarga < 10){
-            impostoCalculado = (super.getImposto() - ((10/100)*super.getImposto()));
+            impostoCalculado = (super.getImposto() - ((10.0/100.0)*super.getImposto()));
         }else if (capacidadeCarga > 10 && capacidadeCarga < 30){
             impostoCalculado = super.getImposto();
         }else{
-            impostoCalculado = (super.getImposto() + ((200/100)*super.getImposto()));
+            impostoCalculado = (super.getImposto() + ((200.0/100.0)*super.getImposto()));
         }
         return impostoCalculado;
     }

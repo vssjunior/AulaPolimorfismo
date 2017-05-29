@@ -31,7 +31,7 @@ public class Trator extends Veiculo{
      */
     @Override
     public String getDescricaoVeiculo() {
-        return super.getDescricaoVeiculo() + "\t\tR$" + calculaImposto();
+        return super.getDescricaoVeiculo();
     }
     
     /**
@@ -40,6 +40,7 @@ public class Trator extends Veiculo{
      * retorna um double com o valor do imposto calculado
      * @return 
      */
+    @Override
     public double calculaImposto(){
         double impostoCalculado = 0;
         return impostoCalculado;
