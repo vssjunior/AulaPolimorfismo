@@ -1,0 +1,27 @@
+Avaliando o código criado nos exercícios responda às questões abaixo.
+Obs: guarde suas respostas para usar na lista de exercícios.
+
+a) Quais são as variáveis polimórficas utilizadas.
+R: Aguia, Cachorro, Galinha, Gato e Lobo são do tipo Aninal, logo a onde se espera um animal, pode-se colocar
+esse animais.
+
+b) Identifique algum ponto no código onde está sendo usado o princípio da substituição.
+R: No array list da classe Simulador, que é uma lista de Animais, logo posso entrar com quaisquer animais que 
+seja um subtipo do seu tipo.
+
+c) Identifique algum ponto no código onde uma variável tem tipo estático e tipo dinâmico diferentes
+(indique qual é a variável e quais são os tipos).
+R: Não possui em meu código uma situação assim.
+
+d) Identifique algum ponto no código onde ocorre o dynamic dispatch. Indique a variável, a chamada do
+método e as classes que têm os métodos que estão sendo chamados dependendo de cada situação.
+R: Em quaisquer variaveis do subtipo de animal, por exemplo: o metodo getDescricaoAnimal() é chamado de acordo
+com a classe em que ele se encontra, pois a descrição de uma galinha é diferente da descrição de um lobo.
+logo o dynamic dispatch busca do nó mais baixo da arvore(denominado como folha)e se não encontrar o metodo,
+via subindo na hierarquia de classe.
+
+e) Identifique onde está sendo usado polimorfismo de método e explique como ele funciona.
+R: Em quaisquer variaveis do subtipo de animal, por exemplo: o metodo emitirSom() é chamado de acordo
+com a classe em que ele se encontra, pois o som de uma galinha é diferente de um som de um lobo.
+logo o dynamic dispatch busca do nó mais baixo da arvore(denominado como folha)e se não encontrar o metodo
+via subindo na hierarquia de classe.
