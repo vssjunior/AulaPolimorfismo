@@ -23,8 +23,8 @@ public class TesteSimulador{
         String placa = "AAA1111";
         boolean ehFlex = true;
         Carro carro = new Carro(modelo, marca, placa, ehFlex);
-        carro.setVelocidadeAtual(240);
         simulador.adicionarCarro(modelo, marca, placa, ehFlex);
+        simulador.alterarVelocidadeVeiculo(modelo, 240);
     }
     
     /**
@@ -40,8 +40,8 @@ public class TesteSimulador{
         String placa = "bbb2222";
         boolean ehFlex = false;
         Carro carro = new Carro(modelo, marca, placa, ehFlex);
-        carro.setVelocidadeAtual(50);
         simulador.adicionarCarro(modelo, marca, placa, ehFlex);
+        simulador.alterarVelocidadeVeiculo(modelo, 50);
     }
     
     /**
@@ -55,8 +55,8 @@ public class TesteSimulador{
         String marca = "Agrale";
         String placa = "ccc3333";
         Trator trator = new Trator(modelo, marca, placa);
-        trator.setVelocidadeAtual(10);
         simulador.adicionarTrator(modelo, marca, placa);
+        simulador.alterarVelocidadeVeiculo(modelo, 10);
     }
     
     /**
@@ -72,8 +72,8 @@ public class TesteSimulador{
         String placa = "ddd4444";
         int cilindrada = 125;
         Moto moto = new Moto (modelo, marca, placa, cilindrada);
-        moto.setVelocidadeAtual(80);
         simulador.adicionarMoto(modelo, marca, placa, cilindrada);
+        simulador.alterarVelocidadeVeiculo(modelo, 80);
     }
     
     /**
@@ -89,8 +89,8 @@ public class TesteSimulador{
         String placa = "eee5555";
         double capacidadeCarga = 15;
         Caminhao caminhao = new Caminhao(modelo, marca, placa, capacidadeCarga);
-        caminhao.setVelocidadeAtual(60);
         simulador.adicionarCaminhao(modelo, marca, placa, capacidadeCarga);
+        simulador.alterarVelocidadeVeiculo(modelo, 240);
     }
     
     /**
@@ -107,8 +107,8 @@ public class TesteSimulador{
         String placa = "fff6666";
         int capacidadePassageiros = 40;
         Onibus onibus = new Onibus(modelo, marca, placa, capacidadePassageiros);
-        onibus.setVelocidadeAtual(60);
         simulador.adicionarOnibus(modelo, marca, placa, capacidadePassageiros);
+        simulador.alterarVelocidadeVeiculo(modelo, 240);
     }
     
     /**

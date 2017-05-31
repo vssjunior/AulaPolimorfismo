@@ -66,7 +66,6 @@ public class Simulador{
      */
     public void adicionarCaminhao(String modelo, String marca, String placa, double capacidadeCarga) {
         Caminhao caminhao = new Caminhao(modelo, marca, placa, capacidadeCarga);
-        
         veiculos.add(caminhao);
     }
     
