@@ -10,7 +10,7 @@ package zoologico;
  * dos animais do zoologico
  * @author JUNIOR
  */
-public class Animal {
+public abstract class Animal {
     String nome = null;
     String especie = null;
     int qtdPatas;
@@ -39,11 +39,9 @@ public class Animal {
     /**
      * emitir som, retorna uma string, que emite o som do respectivo
      * animal, sendo assim deve ser sobrescrito pelas classes filhas.
-     * @return 
+     * @return String
      */
-    public String emitirSom(){
-        return " som do animal ";
-    }
+    public abstract String emitirSom();
     
     /**
     * Retorna a descricao do animal no formato:
